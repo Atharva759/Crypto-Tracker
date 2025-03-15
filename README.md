@@ -1,12 +1,22 @@
-# React + Vite
+# Simple Crypto Currency Price Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Step 1 : Clone the repository 
 
-Currently, two official plugins are available:
+```
+gh repo clone Atharva759/Crypto-Tracker
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Step 2: Run the following commands
 
-## Expanding the ESLint configuration
+```
+npm init -y
+```
+```
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Step 3 : Head to your browser to the following port
+
+```
+http://localhost:5173
+```
