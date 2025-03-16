@@ -8,13 +8,13 @@ const CoinContextProvider = ({children}) =>{
         name:"usd",
         symbol:"$"
     })
-    const api_key = process.env.api_key;
+    const apikey = process.env.VITE_api_key;
     const fetchAllCoin = async () => {
         const options = {
             method: 'GET',
             headers: {
               accept: 'application/json',
-              'x-cg-demo-api-key': `${api_key}`
+              'x-cg-demo-api-key': `${apikey}`
             }
           };
           try {
