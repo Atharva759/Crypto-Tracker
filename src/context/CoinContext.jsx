@@ -22,7 +22,7 @@ const CoinContextProvider = ({children}) =>{
             const data = await response.json();
             setAllCoin(data)
           } catch (error) {
-            console.log("Error Fetching Coin Data.. Try Again .");
+            alert("Error Fetching Coin Data.. Try Again .");
           }  
     }
     useEffect(()=>{

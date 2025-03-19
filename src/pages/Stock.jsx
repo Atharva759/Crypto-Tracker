@@ -2,8 +2,8 @@ import React from 'react'
 
 const Stock = () => {
   return (
-    <div>
-      Stock Page
+    <div className='bg-white text-black'>
+      
     </div>
   )
 }
