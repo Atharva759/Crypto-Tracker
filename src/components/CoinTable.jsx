@@ -3,6 +3,8 @@ import bg from "../assets/bg.jpg";
 import Navbar from "./Navbar";
 import { CoinContext } from "../context/CoinContext";
 import { FaArrowTrendUp } from "react-icons/fa6";
+import { IoMdArrowDropupCircle } from "react-icons/io";
+import { IoMdArrowDropdownCircle } from "react-icons/io";
 import Footer from "./Footer";
 
 const CoinTable = () => {
@@ -67,7 +69,7 @@ const CoinTable = () => {
           </div>
         </div>
         <div className="max-w-[1000px] mx-auto relative mt-[3rem]">
-          <h2 className="font-semibold text-2xl text-center flex justify-center items-center gap-2">Top Trending Crypto Currencies <FaArrowTrendUp className="text-green-600" /></h2>
+          <h2 className="font-semibold text-2xl text-center flex justify-center items-center gap-2 ">Top Trending Crypto Currencies <FaArrowTrendUp className="text-green-600" /></h2>
           <div className="grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1.5fr] p-4 items-center border-b border-gray-700 font-semibold">
             <p className="text-center">Rank</p>
             <p>Coin</p>
@@ -103,9 +105,14 @@ const CoinTable = () => {
                   item.price_change_percentage_24h > 0
                     ? "text-[#00d515]"
                     : "text-[#ff4646]"
-                }`}
+                } flex gap-3 justify-center items-center`}
               >
                 {Math.floor(item.price_change_percentage_24h * 100) / 100} %
+                {item.price_change_percentage_24h > 0 ? (
+    <IoMdArrowDropupCircle className="text-green-600" />
+  ) : (
+    <IoMdArrowDropdownCircle className="text-red-600" />
+  )}
               </p>
 
               <p className="text-right">
