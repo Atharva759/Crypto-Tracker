@@ -32,6 +32,19 @@ const CoinTable = () => {
     }
   }, [allCoin]);
 
+  const topgain = () => {
+    const copy = [...displayCoin]
+    const sorteddata = copy.sort((a,b)=> b.price_change_percentage_24h - a.price_change_percentage_24h)
+    setDisplayCoin(sorteddata);
+    
+    
+  }
+  const toplose = () =>{
+    const copy = [...displayCoin]
+    const sorteddata = copy.sort((a,b)=> a.price_change_percentage_24h - b.price_change_percentage_24h)
+    setDisplayCoin(sorteddata)
+  }
+
   return (
     <div>
       <div className="pb-[3rem]">
@@ -70,6 +83,10 @@ const CoinTable = () => {
         </div>
         <div className="max-w-[1000px] mx-auto relative mt-[3rem]">
           <h2 className="font-semibold text-2xl text-center flex justify-center items-center gap-2 ">Top Trending Crypto Currencies <FaArrowTrendUp className="text-green-600" /></h2>
+          <div className="flex">
+          <button onClick={()=>topgain()} className="border m-3 p-2 rounded-full flex items-center cursor-pointer"><IoMdArrowDropupCircle className="text-green-500" size={25} />Top Gainers</button>
+          <button onClick={()=>toplose()} className="border m-3 p-2 rounded-full flex items-center cursor-pointer"><IoMdArrowDropdownCircle className="text-red-500 " size={25}/> Top Losers</button>
+          </div>
           <div className="grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1.5fr] p-4 items-center border-b border-gray-700 font-semibold">
             <p className="text-center">Rank</p>
             <p>Coin</p>
@@ -84,7 +101,7 @@ const CoinTable = () => {
               className="grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1.5fr] p-4 items-center border-b last:border-none"
             >
               <p className="text-center">{item.market_cap_rank}</p>
-
+              
               <div className="flex items-center gap-3">
                 <img
                   src={item.image}
