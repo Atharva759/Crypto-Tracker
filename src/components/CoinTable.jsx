@@ -47,44 +47,47 @@ const CoinTable = () => {
 
   return (
     <div>
-      <div className="pb-[3rem]">
+      <div className="pb-[3rem] ">
+        <div className="auto h-[550px]">
+          
         <div
-          className="relative h-[110vh] w-full bg-cover bg-center bg-no-repeat rounded-md"
+          className="relative h-[550px] w-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${bg})` }}
-        >
+          >
           <Navbar />
-          <div className="max-w-[900px] ml-[-50px]  mt-[8rem] flex flex-col items-center text-left gap-8">
-            <h1 className="text-[60px] ml-[-85px] font-bold leading-tight relative left-[-40px] text-white">
+          <div className="max-w-[800px] ml-[4rem]  mt-[5rem] flex flex-col items-start text-left gap-8">
+            <h1 className="text-[40px] font-bold leading-tight text-white">
               Smart & Efficient <br /> Crypto Tracker
             </h1>
-            <p className="w-[75%] text-[#e3e3e3] text-[18px] leading-[1.5]">
+            <p className="w-[85%] text-[#e3e3e3] text-[18px] leading-[1.6]">
               Stay updated with your digital assets with our powerful
               platform.Get real-time updates to track your portfolio.
             </p>
             <form
               onSubmit={searchHandler}
-              className="relative z-10 flex items-center w-[60%] bg-white rounded-full p-2 text-[20px] gap-3 ml-[-130px]"
-            >
+              className="relative z-10 flex items-center w-[70%] bg-white rounded-full p-2 text-[18px] gap-2 "
+              >
               <input
                 value={input}
                 onChange={inputHandler}
                 type="text"
                 placeholder="Search Crypto"
-                className="flex-grow text-[16px] outline-none border-none pl-2 text-black "
-              />
+                className="flex-grow text-[14px] outline-none border-none pl-3 text-black "
+                />
               <button
                 type="submit"
-                className="bg-black text-white text-[16px] px-6 py-2 rounded-full cursor-pointer"
-              >
+                className="bg-black text-white text-[14px] px-5 py-2 rounded-full cursor-pointer"
+                >
                 Search
               </button>
             </form>
+          </div>
           </div>
         </div>
         <div className="max-w-[1000px] mx-auto relative mt-[3rem]">
           <h2 className="font-semibold text-2xl text-center flex justify-center items-center gap-2 ">Top Trending Crypto Currencies <FaArrowTrendUp className="text-green-600" /></h2>
           <div className="flex">
-          <button onClick={()=>topgain()} className="border m-3 p-2 rounded-full flex items-center cursor-pointer"><IoMdArrowDropupCircle className="text-green-500" size={25} />Top Gainers</button>
+          <button onClick={()=>topgain()} className="border m-3 p-2 rounded-full flex items-center cursor-pointer "><IoMdArrowDropupCircle className="text-green-500" size={25} />Top Gainers</button>
           <button onClick={()=>toplose()} className="border m-3 p-2 rounded-full flex items-center cursor-pointer"><IoMdArrowDropdownCircle className="text-red-500 " size={25}/> Top Losers</button>
           </div>
           <div className="grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1.5fr] p-4 items-center border-b border-gray-700 font-semibold">
