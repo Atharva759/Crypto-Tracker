@@ -17,7 +17,7 @@ const Navbar = () => {
             <Link to="/pages/etf">ETF</Link>
           </li>
           <li className='cursor-pointer hover:text-white transition'>
-            <Link to="/pages/blog">Blog</Link>
+            <Link to="/pages/news">News</Link>
           </li>
         </ul>
         <div><button className='items-center px-6 py-2 font-medium text-gray-900 bg-white rounded-full cursor-pointer '>Sign Up</button></div>

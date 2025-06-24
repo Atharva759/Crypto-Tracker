@@ -11,12 +11,16 @@ const CoinTable = () => {
   const { allCoin, currency } = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
   const [input, setInput] = useState("");
+
+
   const inputHandler = (event) => {
     setInput(event.target.value);
     if (event.target.value === "") {
       setDisplayCoin(allCoin);
     }
   };
+
+
   const searchHandler = async (event) => {
     event.preventDefault();
     const coins = await allCoin.filter((item) => {
@@ -24,6 +28,8 @@ const CoinTable = () => {
     });
     setDisplayCoin(coins);
   };
+
+
   useEffect(() => {
     if(Array.isArray(allCoin)){
       setDisplayCoin(allCoin);
@@ -36,8 +42,6 @@ const CoinTable = () => {
     const copy = [...displayCoin]
     const sorteddata = copy.sort((a,b)=> b.price_change_percentage_24h - a.price_change_percentage_24h)
     setDisplayCoin(sorteddata);
-    
-    
   }
   const toplose = () =>{
     const copy = [...displayCoin]
@@ -73,7 +77,15 @@ const CoinTable = () => {
                 type="text"
                 placeholder="Search Crypto"
                 className="flex-grow text-[14px] outline-none border-none pl-3 text-black "
+                required
+                list="coinlist"
                 />
+
+                <datalist id='coinlist'>
+                {allCoin.map((item, index) => (
+                  <option key={index} value={item.name}/>))}
+                </datalist>
+
               <button
                 type="submit"
                 className="bg-black text-white text-[14px] px-5 py-2 rounded-full cursor-pointer"

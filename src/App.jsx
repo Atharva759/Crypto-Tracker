@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CoinTable from "./components/CoinTable";
 import Stock from "./pages/Stock/Stock";
-import Blog from "./pages/blog/Blog";
+import News from "./pages/news/News";
 import Etf from "./pages/etf/Etf";
 
 
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<CoinTable />} />
         <Route path="/pages/Stock" element={<Stock/>} />
         <Route path="/pages/etf" element={<Etf/>} />
-        <Route path="/pages/blog" element={<Blog/>} />
+        <Route path="/pages/news" element={<News/>} />
         </Routes>
       </Router>
     </>
