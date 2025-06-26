@@ -4,6 +4,7 @@ import CoinTable from "./components/CoinTable";
 import Stock from "./pages/Stock/Stock";
 import News from "./pages/news/News";
 import Etf from "./pages/etf/Etf";
+import Coin from "./pages/coin/Coin";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/pages/Stock" element={<Stock/>} />
         <Route path="/pages/etf" element={<Etf/>} />
         <Route path="/pages/news" element={<News/>} />
+        <Route path="/pages/coin/:id" element={<Coin />} />
         </Routes>
       </Router>
     </>

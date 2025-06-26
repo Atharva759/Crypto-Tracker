@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import bg from "../assets/bg.jpg";
 import Navbar from "./Navbar";
 import { CoinContext } from "../context/CoinContext";
@@ -6,6 +6,7 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 import { IoMdArrowDropupCircle } from "react-icons/io";
 import { IoMdArrowDropdownCircle } from "react-icons/io";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const CoinTable = () => {
   const { allCoin, currency } = useContext(CoinContext);
@@ -110,10 +111,13 @@ const CoinTable = () => {
             <p className="text-center">Price Change</p>
             <p className="text-right">Market Cap</p>
           </div>
-          {displayCoin.slice(0, 12).map((item, index) => (
-            <div
+          {
+          displayCoin.slice(0, 10).map((item, index) => (
+            <Link
+            to={`/pages/coin/${item.id}`}
               key={index}
               className="grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1.5fr] p-4 items-center border-b last:border-none"
+              title="Click to see more info"
             >
               <p className="text-center">{item.market_cap_rank}</p>
               
@@ -151,7 +155,7 @@ const CoinTable = () => {
                 {currency.symbol}
                 {item.market_cap}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
