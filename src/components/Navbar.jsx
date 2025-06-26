@@ -5,7 +5,9 @@ const Navbar = () => {
   return (
     <div>
       <nav className='flex items-center justify-between py-5 px-[10%] text-gray-300 relative z-[1000] '>
+        <Link to="/">
         <h2 className='text-2xl font-bold'>Cypto Price</h2>
+        </Link>
         <ul className='flex gap-10 list-none'>
         <li className='cursor-pointer hover:text-white transition'>
             <Link to="/">Home</Link>

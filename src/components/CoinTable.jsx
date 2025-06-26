@@ -13,6 +13,14 @@ const CoinTable = () => {
   const [displayCoin, setDisplayCoin] = useState([]);
   const [input, setInput] = useState("");
 
+  const formatNumber = (num) =>{
+    if(!num) return "null";
+    if(num >= 1_000_000_000) return (num/1_000_000_000).toFixed(2)+"B";
+    if(num >= 1_000_000) return (num/1_000_000).toFixed(2)+"M";
+    if(num>=1_000) return (num/1_000).toFixed(2)+"K";
+    return num.toString();
+  }
+
 
   const inputHandler = (event) => {
     setInput(event.target.value);
@@ -153,7 +161,7 @@ const CoinTable = () => {
 
               <p className="text-right">
                 {currency.symbol}
-                {item.market_cap}
+                {formatNumber(item.market_cap)}
               </p>
             </Link>
           ))}
