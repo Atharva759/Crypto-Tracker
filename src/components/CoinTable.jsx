@@ -119,6 +119,7 @@ const CoinTable = () => {
             <p className="text-center">Price Change</p>
             <p className="text-right">Market Cap</p>
           </div>
+          <div className="shadow-2xl rounded-lg">
           {
           displayCoin.slice(0, 10).map((item, index) => (
             <Link
@@ -165,6 +166,7 @@ const CoinTable = () => {
               </p>
             </Link>
           ))}
+          </div>
         </div>
       </div>
       <Footer />
