@@ -108,8 +108,8 @@ const CoinTable = () => {
         <div className="max-w-[1000px] mx-auto relative mt-[3rem]">
           <h2 className="font-semibold text-2xl text-center flex justify-center items-center gap-2 ">Top Trending Crypto Currencies <FaArrowTrendUp className="text-green-600" /></h2>
           <div className="flex">
-          <button onClick={()=>topgain()} className="border m-3 p-2 rounded-full flex items-center cursor-pointer "><IoMdArrowDropupCircle className="text-green-500" size={25} />Top Gainers</button>
-          <button onClick={()=>toplose()} className="border m-3 p-2 rounded-full flex items-center cursor-pointer"><IoMdArrowDropdownCircle className="text-red-500 " size={25}/> Top Losers</button>
+          <button onClick={()=>topgain()} className="border m-3 p-2 rounded-full flex items-center cursor-pointer font-medium"><IoMdArrowDropupCircle className="text-green-500" size={25} />Top Gainers</button>
+          <button onClick={()=>toplose()} className="border m-3 p-2 rounded-full flex items-center cursor-pointer font-medium"><IoMdArrowDropdownCircle className="text-red-500 " size={25}/> Top Losers</button>
           </div>
           <div className="grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1.5fr] p-4 items-center border-b border-gray-700 font-semibold">
             <p className="text-center">Rank</p>
@@ -125,7 +125,7 @@ const CoinTable = () => {
             <Link
             to={`/pages/coin/${item.id}`}
               key={index}
-              className="grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1.5fr] p-4 items-center border-b last:border-none"
+              className="grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1.5fr] p-4 items-center border-b last:border-none duration-300 ease-out transform hover:scale-105 hover:bg-gray-200 hover:rounded-lg hover:border-none"
               title="Click to see more info"
             >
               <p className="text-center">{item.market_cap_rank}</p>
