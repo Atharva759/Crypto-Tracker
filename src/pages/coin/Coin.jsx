@@ -78,7 +78,7 @@ const Coin = () => {
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
       <div className="bg-white shadow-2xl rounded-2xl w-full max-w-6xl p-8">
         <div className="flex flex-col md:flex-row items-start gap-8">
-          {/* Coin Info + Stats */}
+          
           <div className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/3">
             <img
               src={coinData.image.large}
@@ -95,7 +95,7 @@ const Coin = () => {
               {coinData.description.en.split(". ")[0]}.
             </p>
 
-            {/* Additional Stats */}
+            
             <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-700 w-full">
               <div className="bg-gray-100 rounded-lg p-4">
                 <p className="font-medium">Market Cap</p>
@@ -147,7 +147,7 @@ const Coin = () => {
             </div>
           </div>
 
-          {/* Chart + Dropdown */}
+          
           <div className="w-full md:w-2/3">
             <div className="bg-gray-50 rounded-xl p-6 shadow-inner h-full">
               <div className="flex items-center justify-between mb-4">

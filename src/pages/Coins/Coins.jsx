@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import Sample from "../../assets/sample.png"
 
 
-const Stock = () => {
+const Coins = () => {
   
   return (
     
@@ -22,4 +22,4 @@ const Stock = () => {
   )
 }
 
-export default Stock
+export default Coins;

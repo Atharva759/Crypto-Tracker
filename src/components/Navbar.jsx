@@ -1,8 +1,9 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CoinContext } from '../context/CoinContext';
+import navlogo from "../../public/navlogo.png"
 
-const Navbar = () => {
+const Navbar = ({showCurrencySelector}) => {
   const { currency, setCurrency } = useContext(CoinContext);
   const handleCurrencyChange = (e) => {
     const selected = e.target.value;
@@ -22,35 +23,45 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <nav className='flex items-center justify-between py-5 px-[10%] text-gray-300 relative z-[1000] '>
-        <Link to="/">
-        <h2 className='text-2xl font-bold'>Cypto Price</h2>
-        </Link>
-        <ul className='flex gap-10 list-none font-medium'>
-        <li className='cursor-pointer hover:text-white transition'>
-            <Link to="/">Home</Link>
-          </li>
-          <li className='cursor-pointer hover:text-white transition'>
-            <Link to="/pages/Stock">Stocks</Link>
-          </li>
-          <li className='cursor-pointer hover:text-white transition'>
-            <Link to="/pages/etf">ETF</Link>
-          </li>
-          <li className='cursor-pointer hover:text-white transition'>
-            <Link to="/pages/news">News</Link>
-          </li>
-        </ul>
-        <div>
-          <span className='font-normal m-2'>Choose Currency</span>
-            <select value={currency.name} onChange={handleCurrencyChange} className=' p-2 w-20 border rounded-lg bg-gray-300 text-black mt-1 cursor-pointer'>
-              <option value="usd">USD</option>
-              <option value="inr">INR</option>
-              <option value="eur">EUR</option>
-            </select>
-          </div>
-      </nav>
+    <div className=''>
+  <nav className="flex items-center justify-between py-5 px-[5%] bg-black text-white relative z-[1000] ">
+    <div className='flex items-center flex-shrink-0'>
+    <Link to="/" className='flex items-center gap-2'>
+    <img src={navlogo} alt="" className='w-15 h-15 mr-2 object-contain' />
+      <h2 className="text-2xl font-bold">Crypto Tracker</h2>
+    </Link>
     </div>
+    <ul className="flex gap-10 list-none font-medium mx-auto">
+      <li className="cursor-pointer hover:text-gray-300 transition duration-200">
+        <Link to="/">Home</Link>
+      </li>
+      <li className="cursor-pointer hover:text-gray-300 transition duration-200">
+        <Link to="/pages/Coins">Coins</Link>
+      </li>
+      <li className="cursor-pointer hover:text-gray-300 transition duration-200">
+        <Link to="/pages/etf">ETF</Link>
+      </li>
+      <li className="cursor-pointer hover:text-gray-300 transition duration-200">
+        <Link to="/pages/news">News</Link>
+      </li>
+    </ul>
+    {showCurrencySelector && (
+  <div className="flex items-center text-sm gap-1">
+    <span className="mr-1">Currency</span>
+    <select
+      value={currency.name}
+      onChange={handleCurrencyChange}
+      className="px-2 py-1 w-17 border-2 border-gray-400 rounded-lg bg-black text-white text-sm cursor-pointer hover:bg-gray-600 h-7"
+    >
+      <option value="usd">USD</option>
+      <option value="inr">INR</option>
+      <option value="eur">EUR</option>
+    </select>
+  </div>
+)}
+  </nav>
+</div>
+
   )
 }
 

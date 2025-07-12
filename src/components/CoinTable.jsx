@@ -60,14 +60,14 @@ const CoinTable = () => {
 
   return (
     <div>
-      <div className="pb-[3rem] ">
+      <Navbar showCurrencySelector={true} />
+      <div className="pb-[3rem]">
         <div className="auto h-[550px]">
           
         <div
           className="relative h-[550px] w-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${bg})` }}
           >
-          <Navbar />
           <div className="max-w-[800px] ml-[4rem]  mt-[5rem] flex flex-col items-start text-left gap-8">
             <h1 className="text-[40px] font-bold leading-tight text-white">
               Smart & Efficient <br /> Crypto Tracker
