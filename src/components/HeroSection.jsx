@@ -1,11 +1,15 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 import hero_2 from "../assets/hero_2.png"
-
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 const HeroSection = () => {
+
   return (
     <div>
+
+      <Navbar/>
       <section 
   className="relative bg-gray-900 text-white flex items-center justify-center px-6 md:px-16 py-10 pb-14"
   >
@@ -39,7 +43,7 @@ const HeroSection = () => {
     </div>
   </div>
 </section>
-
+    <Footer/>
     </div>
   )
 }

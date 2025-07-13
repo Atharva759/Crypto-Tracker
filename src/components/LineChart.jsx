@@ -1,6 +1,5 @@
-import React from 'react';
-import Chart from 'react-google-charts';
-import { useState, useEffect } from 'react';
+import Chart from "react-google-charts";
+import { useState, useEffect } from "react";
 
 const LineChart = ({ historicalData }) => {
   const [data, setData] = useState([["Date", "Prices"]]);
@@ -15,14 +14,7 @@ const LineChart = ({ historicalData }) => {
     }
   }, [historicalData]);
 
-  return (
-    <Chart 
-      chartType='LineChart'
-      data={data}
-      height="100%"
-      legendToggle
-    />
-  );
+  return <Chart chartType="LineChart" data={data} height="100%" legendToggle />;
 };
 
 export default LineChart;
