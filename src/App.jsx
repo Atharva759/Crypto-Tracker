@@ -6,7 +6,7 @@ import Etf from "./pages/etf/Etf";
 import Coin from "./pages/coin/Coin";
 import CoinContextProvider from "./context/CoinContext";
 import HeroSection from "./components/HeroSection";
-import Allcoins from "./pages/allcoins/allcoins";
+import Allcoins from "./pages/allcoins/Allcoins";
 
 function App() {
   return (
