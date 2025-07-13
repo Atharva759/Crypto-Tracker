@@ -135,7 +135,7 @@ const Coins = () => {
                 <span className="font-semibold">{item.name}</span>
                 <span className="text-gray-600 uppercase">({item.symbol})</span>
               </div>
-              <span className="text-gray-800 font-medium">
+              <span className="text-blue-700 font-medium">
                 ${formatNumber(item.market_cap)}
               </span>
             </Link>

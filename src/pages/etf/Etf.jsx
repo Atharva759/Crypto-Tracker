@@ -3,7 +3,7 @@ import Sample from "../../assets/sample.png";
 const Etf = () => {
   return (
     <>
-      <div className="flex justify-center items-center flex-col h-screen bg-gray-600">
+      <div className="flex justify-center items-center flex-col h-screen bg-gray-300">
         <div className="text-center p-6 bg-white shadow-lg rounded-lg">
           <h2 className="text-3xl font-bold text-gray-700">
             🚧 Under Development 🚧
