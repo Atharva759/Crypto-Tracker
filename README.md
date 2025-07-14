@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Crypto Tracker</h1>
 
-<p align="center"><img src="https://socialify.git.ci/Atharva759/Crypto-Tracker/image?custom_language=React&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Transparent&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
+<p align="center"><img src="https://socialify.git.ci/Atharva759/Crypto-Tracker/image?custom_language=React&font=Inter&language=1&name=1&owner=1&pattern=Plus&stargazers=1&theme=Light" alt="project-image"></p>
 
 <p id="description">Crypto Tracker is a modern and intuitive web application designed to track the latest cryptocurrency prices trends and market data in real-time. Built with React and styled with TailwindCSS CryptoTrack provides a clean responsive and dynamic user interface. The app features a comprehensive dashboard that displays key data such as top-performing coins price changes and market capitalization. Users can explore detailed pages for individual coins including visual charts powered by Google Charts and stay updated with the latest news from the cryptocurrency world.</p>
 
