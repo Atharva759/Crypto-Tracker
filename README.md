@@ -1,26 +1,61 @@
-# Simple Crypto Currency Price Tracker
+<h1 align="center" id="title">Crypto Tracker</h1>
 
-Step 1 : Clone the repository 
+<p align="center"><img src="https://socialify.git.ci/Atharva759/Crypto-Tracker/image?custom_language=React&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Transparent&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
+
+<p id="description">Crypto Tracker is a modern and intuitive web application designed to track the latest cryptocurrency prices trends and market data in real-time. Built with React and styled with TailwindCSS CryptoTrack provides a clean responsive and dynamic user interface. The app features a comprehensive dashboard that displays key data such as top-performing coins price changes and market capitalization. Users can explore detailed pages for individual coins including visual charts powered by Google Charts and stay updated with the latest news from the cryptocurrency world.</p>
+
+<h2>🚀 Demo</h2>
+
+[https://crypto-tracker-eta-two.vercel.app/](https://crypto-tracker-eta-two.vercel.app/)
+
+<h2>Project Screenshots:</h2>
+
+<img src="https://i.postimg.cc/CxkPrPL0/image.png" alt="project-screenshot" width="500" height="500/">
+
+<img src="https://i.postimg.cc/1R7j8VYk/image.pngz" alt="project-screenshot" width="500" height="500/">
+
+  
+  
+<h2>🧐 Features</h2>
+
+Here're some of the project's best features:
+
+*   Live Dashboard
+*   Latest News
+*   Price Charts
+
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. Clone the Repositary</p>
 
 ```
-gh repo clone Atharva759/Crypto-Tracker
+git clone https://github.com/Atharva759/Crypto-Tracker.git
 ```
 
-Step 2 : Create your api key from coin gecko & add it to a .env file 
-
-Step 3 : Run the following commands
+<p>2. Install Dependencies</p>
 
 ```
-npm init -y
+npm install
 ```
+
+<p>3. Start the Development Server</p>
+
 ```
 npm run dev
 ```
 
-Step 4 : Head to your browser to the following port
+<p>4. Live Preview</p>
 
 ```
 http://localhost:5173
 ```
 
-This project is in further development.
+  
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   React
+*   Tailwindcss
+*   Google Charts
